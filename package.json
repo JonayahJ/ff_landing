@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  },
+  "name": "fourfront-landingpage",
+  "version": "1.0.0",
+  "description": "FourFront Prelaunch Landing Page",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "node-sass ff_landing/static/sass/main.scss ff_landing/static/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonayahJ/ff_landing.git"
+  },
+  "keywords": [
+    "FourFront",
+    "Landing",
+    "Prelaunch",
+    "Site",
+    "Django",
+    "Sass"
+  ],
+  "author": "Jonayah M. Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonayahJ/ff_landing/issues"
+  },
+  "homepage": "https://github.com/JonayahJ/ff_landing#readme"
+}
