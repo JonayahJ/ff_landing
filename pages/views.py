@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, "pages/home.html")
+
+def survey(request):
+    return render(request, "pages/survey.html")
