@@ -530,90 +530,17 @@
                 Meet our Experts and Advisors
             </h2>
             <div class="row">
-                <div class="col-1-of-4">
-                    <!-- Headshot -->
-                    <div class="experts__headshot u-margin-bottom-medium">
-                        <div class="u-margin-top-large u-margin-bottom-large">
-                            Headshot
+                {% for expert in experts %}
+                    <div class="card overflow-hidden" style="width: 26rem; padding: 0; margin-right: 15px; margin-bottom: 20px; border-radius: 10px;">
+                        <img src="{{ expert.headshot.url }}" class="card-img-top" alt="Expert Headshot">
+                        <div class="card-body">
+                            <a href="{{ expert.linkedin }}" class="card-link" target="_blank" rel="noopener noreferrer"><h5 class="card-title experts__name">{{ expert.name }}</h5></a>
+                            <p class="card-text experts__companies">{{ expert.designation }}</p>
+                            <img src="{{ expert.company1.url }}" width="90" height="auto" alt="Company Logo">&emsp;
+                            <img src="{{ expert.company2.url }}" width="90" height="auto" alt="Company Logo">
                         </div>
                     </div>
-                    <!-- Name -->
-                    <h3 class="experts__name">
-                        LOREM IPSUM
-                    </h3>
-                    <!-- Link -->
-                    <p class="experts__link">
-                        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                    </p>
-                    <!-- Companies -->
-                    <div class="companies">
-                        <div class="col-1-of-2">Company 1</div>
-                        <div class="col-1-of-2">Company 1</div>
-                    </div>
-                </div>
-                <div class="col-1-of-4">
-                    <!-- Headshot -->
-                    <div class="experts__headshot u-margin-bottom-medium">
-                        <div class="u-margin-top-large u-margin-bottom-large">
-                            Headshot
-                        </div>
-                    </div>
-                    <!-- Name -->
-                    <h3 class="experts__name">
-                        LOREM IPSUM
-                    </h3>
-                    <!-- Link -->
-                    <p class="experts__link">
-                        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                    </p>
-                    <!-- Companies -->
-                    <p class="experts__companies">
-                        Company 1 <br>
-                        Company 2
-                    </p>
-                </div>
-                <div class="col-1-of-4">
-                    <!-- Headshot -->
-                    <div class="experts__headshot u-margin-bottom-medium">
-                        <div class="u-margin-top-large u-margin-bottom-large">
-                            Headshot
-                        </div>
-                    </div>
-                    <!-- Name -->
-                    <h3 class="experts__name">
-                        LOREM IPSUM
-                    </h3>
-                    <!-- Link -->
-                    <p class="experts__link">
-                        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                    </p>
-                    <!-- Companies -->
-                    <p class="experts__companies">
-                        Company 1 <br>
-                        Company 2
-                    </p>
-                </div>
-                <div class="col-1-of-4">
-                    <!-- Headshot -->
-                    <div class="experts__headshot u-margin-bottom-medium">
-                        <div class="u-margin-top-large u-margin-bottom-large">
-                            Headshot
-                        </div>
-                    </div>
-                    <!-- Name -->
-                    <h3 class="experts__name">
-                        LOREM IPSUM
-                    </h3>
-                    <!-- Link -->
-                    <p class="experts__link">
-                        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                    </p>
-                    <!-- Companies -->
-                    <p class="experts__companies">
-                        Company 1 <br>
-                        Company 2
-                    </p>
-                </div>
+                {% endfor %}
             </div>
         </section>
 
