@@ -751,9 +751,7 @@
             <p class="subscribe__text-mini u-margin-bottom-medium">
                 We won’t spam your inbox.
             </p>
-            <form 
-            {% comment %} action="{% url 'email' %}"  {% endcomment %}
-            method="POST">
+            <form action="{% url 'email' %}" method="POST">
                 {% csrf_token %}
                 <div class="row subscribe__input">
                     <div class="input-group mb-3">
