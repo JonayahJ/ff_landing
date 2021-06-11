@@ -13,7 +13,7 @@
         <section class="question">
             <form action="{% url 'survey' %}" method="POST">
                 {% csrf_token %}
-                {% comment %} Q1 {% endcomment %}
+                <!-- Q1 -->
                 <div class="row">
                     <div class="question__text">
                         Q1. Are you a startup Founder or Co-Founder with no prior technology experience?
@@ -177,7 +177,6 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    {% comment %} {{ form.tech_challenge }} {% endcomment %}
                     <div class="col-lg offset">
                         <div class="form-check form-check-inline col-1-of-7">
                             <input class="form-check-input multiple-choice" type="radio" name="tech_challenge" id="tech_challenge1" value="1">

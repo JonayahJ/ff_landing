@@ -13,3 +13,6 @@ def home(request):
 
 def survey(request):
     return render(request, "pages/survey.html")
+
+def thank_you(request):
+    return render(request, "pages/thank_you.html")

@@ -371,6 +371,14 @@ a {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 4rem; }
+  .thank-you h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .thank-you p {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem; }
 
 .row {
   max-width: 114rem;
