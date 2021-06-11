@@ -135,34 +135,71 @@
                     <h2 class="testimonials__header u-margin-bottom-small">
                         What Our Clients Say
                     </h2>
-                    <p class="testimonials__text">
-                        “Under the training and guidance from FourFront’s base of experts, a single student was able to bring us from a conceptual idea to a fully-functioning, hosted, and tested web application.”
-                    </p>
-                    <!-- Testimonial Source -->
-                    <div class="row">
-                        <!-- Name -->
-                        <div class="col-2-of-3">
-                            <h3 class="testimonials__name">
-                                Cris
-                            </h3>
-                            <p class="testimonials__company">
-                                Founder of Streamcicle 
-                            </p>
+                    <!-- Carousel of Quotes -->
+                    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Testimonial
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                        <h3>“Under the training and guidance from FourFront’s base of experts, a single student was able to bring us from a conceptual idea to a fully-functioning, hosted, and tested web application.”</h3><br>
+                                        <footer class="blockquote-footer">Cristopher Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Testimonial
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                        <h3>"Working with FourFront Insights is a unique experience. Beyond their ability to deliver innovative technological solutions, they take a keen interest in understanding your business and providing insightful advice in helping you reach your business goals in the most effective and efficient manner (which is especially important in the startup world where capital is limited)."</h3><br>
+                                        <footer class="blockquote-footer">Clinton Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Testimonial
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                        <h3>"Santha and her team have been instrumental in helping us get things up and running in short order.  It’s a real win-win all around and her commitment to our success (and the success of all her clients) is truly genuine and yet highly effective.  I guess she is a “Hungry Hunter” too ;-D."</h3><br>
+                                        <footer class="blockquote-footer">Clinton Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Testimonial
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                        <h3>"I really like what Be@TheFourFront and Santha are providing and I think it makes a lot of sense for startup entrepreneurs like me who has no prior startup and technology experience"</h3><br>
+                                        <footer class="blockquote-footer">Jessica Seeperhead, Founder of <cite title="Source Title">Klouf</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Picture -->
-                        <div class="col-1-of-3">
-                            <i class="fas fa-user-circle fa-4x testimonials__icon"></i>
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <!-- Chevrons -->
-                    <!-- <div class="row testimonials__chevrons">
-                        <div class="col-1-of-2">
-                            <i class="fas fa-chevron-circle-left fa-2x"></i>
-                        </div>
-                        <div class="col-1-of-2" style="text-align: right;">
-                            <i class="fas fa-chevron-circle-right fa-2x"></i>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -312,10 +349,32 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Button -->
                         <div class="u-margin-bottom-medium">
                             <a href="#" id="button">Learn More</a>
-                        </div>                        
+                        </div>        
+                        <!-- Button trigger modal -->
+                        {% comment %} <button type="button" id="button" data-bs-toggle="modal" data-bs-target="#Modal1">
+                            Learn More
+                        </button> {% endcomment %}
+
+                        <!-- Modal -->
+                        {% comment %} <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" id="Modal1Label">What Our clients Say</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>"With an idea and minimal technological background, we onboarded Santha as our consulting CHTO - Chief Humanizing Technology Officer; which proved to be a priceless amount of value as she was able to bring our idea to complete fruition."</p>
+                                        <p>&mdash;Cristopher Joseph, Co-Founder Streamcicle</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
                 <div class="col-1-of-2" id="high-quality">
