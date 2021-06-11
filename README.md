@@ -3,6 +3,7 @@ This is the documentation for the FourFront Prelaunch Website backend.
 
 ## What to Know About the Postgresql 13 Database Tables
 ### Contacts App
+In this app, responses from the questionnaire are saved in the database under the table *contacts_survey*.
 * **tech_exp** asks whether or not the contact has technical experience (options: yes, no, other) 
 * **tech_exp_text** is the input field for if the contact responded *other*
 * **tech_founder** asks if the contact is a technical founder (options: yes, no, other) 
@@ -24,4 +25,22 @@ meeting deadlines (deadlines); working with a dev agency (dev-agency); other (ot
 * **subscriber_email** is the contact's email address
 * **created_at** is when the contact submitted the form
 
+When a new form is submitted, an email is sent to all superusers from the **support@fourfront.io** email address.
+
+### Pages App
+In this app, new experts and advisors can be added and dynamically rendered onto the landing page via the **Django Admin Page** by a superuser.  Experts and Advisors are saved into the table *pages_expert*.
+* **name** is the expert/advisor's *full* name.
+* **linkedin** is the *link* to the expert/advisor's LinkedIn profile page.
+* **headshot** is the expert/advisor's headshot.
+* **company1** is the uploaded .png file of a recent company the expert/advisor worked at (can be blank when creating an expert/advisor, but is necessary for dynamically rendering a card in the Expert section on the landing page).
+* **company2** is the uploaded .png file of a recent company the expert/advisor worked at (can be blank when creating an expert/advisor, but is necessary for dynamically rendering a card in the Expert section on the landing page).
+* **created_at** is when the expert/advisor was added in Admin.
+* **designation** is a *charfield* that differentiates between experts, advisors, CEOS, etc.
+
+
 ### Subscriber App
+In this app, people interested in reaching out to FourFront can leave their email addresses for direct contact.
+* **subscriber_email** is the contact's email address
+* **created_at** is when the contact submitted the form
+
+When a new form is submitted, an email is sent to all superusers from the **support@fourfront.io** email address.
