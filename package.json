@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "node-sass": "^6.0.0"
   },
   "name": "fourfront-landingpage",
