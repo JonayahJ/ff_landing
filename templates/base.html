@@ -30,7 +30,7 @@
 <body>
 
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg" id="top">
+    <nav class="navbar navbar-expand-lg" id="top" style="background-image: linear-gradient(15deg, #3d7fc1ff 0%, #3ec4b0ff 100%);">
         <div class="container-fluid">
             <!-- Logo -->
             <a href="/" class="navbar-brand">
@@ -48,9 +48,10 @@
             </button>
         </div>
         
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="background-color: transparent !important;">
             <ul class="navbar-nav">
                 {% block links %}{% endblock %}
+                <a href="/#signup" class="nav-link" id="button" style="width: 150px;">Contact Us</a>
             </ul>
         </div>
     </nav>
