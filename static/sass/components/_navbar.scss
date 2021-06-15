@@ -3,7 +3,7 @@
     height: 10rem;
     display: flex;
     justify-content: space-between;
-    padding: 0.8rem calc((100vw - 1200px) /2);
+    padding: 1rem calc((100vw - 1200px) /2);
     z-index: 10;
     position: relative;
 
@@ -52,7 +52,8 @@
             font-size: 1.8rem;
             justify-content: center;
             text-decoration: none;
-            padding: $nav-link-padding-x;
+            padding: 1rem;
+            width: 50px;
 
             &:hover {
                 color: $keppel;

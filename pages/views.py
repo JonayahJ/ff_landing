@@ -5,7 +5,7 @@ from .models import Expert
 # Create your views here.
 
 def home(request):
-    experts = Expert.objects.all()
+    experts = Expert.objects.all().order_by("name")
     data = {
         'experts': experts
     }

@@ -1,19 +1,13 @@
 {% extends "base.html" %}
-{% comment %} {% load static %}
-
-{% block css_files %}
-    <link rel="stylesheet" href="{% static "/css/styles.css" %}" />
-{% endblock %} {% endcomment %}
 
 {% block title %}Home{% endblock %}
 
 {% block links %}
-    <a href="#journey" class="nav-link">Your Journey</a>
-    {% comment %} <a href="#testimonials" class="nav-link">Testimonials</a> {% endcomment %}
-    <a href="#solutions" class="nav-link">Solutions</a>
-    <a href="#benefits" class="nav-link">Benefits</a>
-    <a href="#experts" class="nav-link">About Us</a>
-    <a href="#faq" class="nav-link">FAQ</a>
+    <li class="nav-item"><a href="#journey" class="nav-link" style="padding: 1.5rem">Journey</a></li>
+    <li class="nav-item"><a href="#solutions" class="nav-link" style="padding: 1.5rem">Solutions</a></li>
+    <li class="nav-items"><a href="#benefits" class="nav-link" style="padding: 1.5rem">Benefits</a></li>
+    <li class="nav-items"><a href="#experts" class="nav-link" style="padding: 1.5rem">About</a></li>
+    <li class="nav-items"><a href="#faq" class="nav-link" style="padding: 1.5rem">FAQ</a></li>
 {% endblock %}
 
 {% block content %}
@@ -31,11 +25,11 @@
             </p>
             <br>
             <div class="tabbed-text">
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#industry-expertise">Industry Expertise &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#high-quality">High Quality &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#affordable">Affordable &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#peace-of-mind">Peace of Mind &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#build-for-the-future">Build for the Future</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#industry-expertise" class="tabbed-text">INDUSTRY EXPERTISE &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#high-quality" class="tabbed-text">HIGH QUALITY &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#affordable" class="tabbed-text">AFFORDABLE &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#peace-of-mind" class="tabbed-text">PEACE OF MIND &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#build-for-the-future" class="tabbed-text">BUILD FOR THE FUTURE</a></button>
                 
             </div>
             <br>
@@ -136,66 +130,66 @@
                         What Our Clients Say
                     </h2>
                     <!-- Carousel of Quotes -->
-                    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></li>
+                        </ol>
+                        <!-- Quote 1 -->
                         <div class="carousel-inner">
-                            <div class="carousel-item active" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                            <div class="carousel-item active" style="transition: 15s ease-in-out left" id="quote1">
+                                <div class="card" style="border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>“Under the training and guidance from FourFront’s base of experts, a single student was able to bring us from a conceptual idea to a fully-functioning, hosted, and tested web application.”</h3><br>
+                                        <h3 style="line-height: 3.5rem;">“Under the training and guidance from FourFront’s base of experts, a single student was able to bring us from a conceptual idea to a fully-functioning, hosted, and tested web application.”</h3><br>
                                         <footer class="blockquote-footer">Cristopher Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                            <!-- Quote 2 -->
+                            <div class="carousel-item" style="transition: 15s ease-in-out left" id="quote2">
+                                <div class="card" style="border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"Working with FourFront Insights is a unique experience. Beyond their ability to deliver innovative technological solutions, they take a keen interest in understanding your business and providing insightful advice in helping you reach your business goals in the most effective and efficient manner (which is especially important in the startup world where capital is limited)."</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"Working with FourFront Insights is a unique experience. Beyond their ability to deliver innovative technological solutions, they take a keen interest in understanding your business and providing insightful advice in helping you reach your business goals in the most effective and efficient manner (which is especially important in the startup world where capital is limited)."</h3><br>
                                         <footer class="blockquote-footer">Clinton Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                            <!-- Quote 3 -->
+                            <div class="carousel-item" style="transition: 15s ease-in-out left" id="quote3">
+                                <div class="card" style="border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"Santha and her team have been instrumental in helping us get things up and running in short order.  It’s a real win-win all around and her commitment to our success (and the success of all her clients) is truly genuine and yet highly effective.  I guess she is a “Hungry Hunter” too ;-D."</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"Santha and her team have been instrumental in helping us get things up and running in short order.  It’s a real win-win all around and her commitment to our success (and the success of all her clients) is truly genuine and yet highly effective.  I guess she is a “Hungry Hunter” too ;-D."</h3><br>
                                         <footer class="blockquote-footer">Clinton Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                            <!-- Quote 4 -->
+                            <div class="carousel-item" style="transition: 15s ease-in-out left" id="quote4">
+                                <div class="card" style="border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"I really like what Be@TheFourFront and Santha are providing and I think it makes a lot of sense for startup entrepreneurs like me who has no prior startup and technology experience"</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"I really like what Be@TheFourFront and Santha are providing and I think it makes a lot of sense for startup entrepreneurs like me who has no prior startup and technology experience"</h3><br>
                                         <footer class="blockquote-footer">Jessica Seeperhead, Founder of <cite title="Source Title">Klouf</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -355,7 +349,7 @@
                                 Learn More
                             </button>
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -435,7 +429,7 @@
                             <div class="col-1-of-2 u-margin-top-medium">
                                 <!-- Icon -->
                                 <div class="col-1-of-3">
-                                    <i class="fas fa-money-bill-alt fa-3x benefits__icon"></i>
+                                    <i class="fas fa-dollar-sign fa-3x benefits__icon"></i>
                                 </div>
                                 <!-- Text -->
                                 <div class="col-2-of-3">
@@ -559,54 +553,53 @@
                     </h2>
                     <!-- Carousel of Quotes -->
                     <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                            <li style="background-color: #3ec4b0ff; transform: translateY(3rem);" type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></li>
+                        </ol>
                         <div class="carousel-inner">
+                            <!-- Quote 1 -->
                             <div class="carousel-item active" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                                <div class="card" style="background-color: transparent; border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"With an idea and minimal technological background, we onboarded Santha as our consulting CHTO - Chief Humanizing Technology Officer; which proved to be a priceless amount of value as she was able to bring our idea to complete fruition."</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"With an idea and minimal technological background, we onboarded Santha as our consulting CHTO - Chief Humanizing Technology Officer; which proved to be a priceless amount of value as she was able to bring our idea to complete fruition."</h3><br>
                                         <footer class="blockquote-footer">Cristopher Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Quote 2 -->
                             <div class="carousel-item" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                                <div class="card" style="background-color: transparent; border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"The caliber of students she paired with us, the confidence she instilled through our constant communication, and her ability to coach a student to deliver a fully functional prototype within an aggressive timeline is all in support of her expertise, intuition, desire to build her students into development leaders, and desire to ultimately deliver quality service to businesses."</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"The caliber of students she paired with us, the confidence she instilled through our constant communication, and her ability to coach a student to deliver a fully functional prototype within an aggressive timeline is all in support of her expertise, intuition, desire to build her students into development leaders, and desire to ultimately deliver quality service to businesses."</h3><br>
                                         <footer class="blockquote-footer">Cristopher Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Quote 3 -->
                             <div class="carousel-item" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                                <div class="card" style="background-color: transparent; border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"With FourFront’s model, Santha was able to deliver this under budget when compared to her competitors. I fully recommend Santha and FourFront Insights for any and all technological development needs that you may have."</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"With FourFront’s model, Santha was able to deliver this under budget when compared to her competitors. I fully recommend Santha and FourFront Insights for any and all technological development needs that you may have."</h3><br>
                                         <footer class="blockquote-footer">Cristopher Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Quote 4 -->
                             <div class="carousel-item" style="transition: 15s ease-in-out left">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Testimonial
-                                    </div>
+                                <div class="card" style="background-color: transparent; border: none; outline: none; text-align: right;">
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
-                                        <h3>"Santha especially is highly innovative and very well experienced in the startup world. Her insights were greatly appreciated as she helped us think outside the box and adjust our strategies to get the biggest value for our precious dollar. I would recommend Santha and her team at FourFront Insights to any business, especially those starting out."</h3><br>
+                                        <h3 style="line-height: 3.5rem;">"Santha especially is highly innovative and very well experienced in the startup world. Her insights were greatly appreciated as she helped us think outside the box and adjust our strategies to get the biggest value for our precious dollar. I would recommend Santha and her team at FourFront Insights to any business, especially those starting out."</h3><br>
                                         <footer class="blockquote-footer">Clinton Joseph, Co-Founder of <cite title="Source Title">Streamcicle</cite></footer>
                                         </blockquote>
                                     </div>

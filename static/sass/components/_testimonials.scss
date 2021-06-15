@@ -32,6 +32,14 @@
   &__chevrons {
     color: $cadet-blue-crayola;
   }
+
+  &__card{
+    background-color: transparent;
+    border: none; 
+    outline: none;
+    line-height: 2rem;
+    text-align: right;
+  }
     
 }
 

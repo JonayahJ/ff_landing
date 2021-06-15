@@ -112,7 +112,7 @@ body {
   height: 10rem;
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem calc((100vw - 1200px) /2);
+  padding: 1rem calc((100vw - 1200px) /2);
   z-index: 10;
   position: relative; }
   .navbar__logo {
@@ -146,7 +146,8 @@ body {
     font-size: 1.8rem;
     justify-content: center;
     text-decoration: none;
-    padding: 1.5rem; }
+    padding: 1rem;
+    width: 50px; }
     .navbar .nav-link:hover {
       color: #3ec4b0;
       transition: all 0.3s ease; }
@@ -185,6 +186,12 @@ body {
       display: none; } }
   .testimonials__chevrons {
     color: #a6b0bc; }
+  .testimonials__card {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    line-height: 2rem;
+    text-align: right; }
 
 .video-wrapper {
   position: relative;
