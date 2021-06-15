@@ -522,6 +522,9 @@ a {
   .footer__copyright {
     position: absolute;
     top: 40%; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        color: #677384; } }
 
 /* Popup container */
 .popup {

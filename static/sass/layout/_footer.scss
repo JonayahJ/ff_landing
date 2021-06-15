@@ -11,6 +11,10 @@
     &__copyright {
         position: absolute;
         top: 40%;
+
+        @include respond(tab-port){
+            color: $slate-gray;
+        }
     }
 
 }
