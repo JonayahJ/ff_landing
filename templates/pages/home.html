@@ -343,29 +343,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="u-margin-bottom-small">
-                            <!-- Button trigger -->
-                            <button type="button" id="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Learn More
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Some text...
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>        
                     </div>
                 </div>
                 <div class="col-1-of-2" id="high-quality">
@@ -405,10 +382,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Button -->
-                        <div class="u-margin-bottom-medium">
-                            <a href="#" id="button">Learn More</a>
-                        </div>                        
                     </div>
                 </div>
             </div>
@@ -451,10 +424,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Button -->
-                        <div class="u-margin-bottom-medium">
-                            <a href="#" id="button">Learn More</a>
-                        </div>                        
                     </div>
                 </div>
                 <div class="col-1-of-2" id="peace-of-mind">
@@ -494,10 +463,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Button -->
-                        <div class="u-margin-bottom-medium">
-                            <a href="#" id="button">Learn More</a>
-                        </div>                        
                     </div>
                 </div>
             </div>
@@ -540,10 +505,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Button -->
-                        <div class="u-margin-bottom-medium">
-                            <a href="#" id="button">Learn More</a>
-                        </div>                        
                     </div>
                 </div>
                 <div class="col-1-of-2">
@@ -622,7 +583,7 @@
         <!-- Experts Section -->
         <section class="experts" id="experts">
             <h2 class="experts__header u-margin-bottom-large">
-                Meet our Experts and Advisors
+                Our Advisors
             </h2>
             <div class="row">
                 {% for expert in experts %}
@@ -633,6 +594,26 @@
                             <p class="card-text experts__companies">{{ expert.designation }}</p>
                             <img src="{{ expert.company1.url }}" width="90" height="auto" style="margin-left: 10px;" alt="Company Logo">&emsp;
                             <img src="{{ expert.company2.url }}" width="90" height="auto" alt="Company Logo">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        <!-- Advisors Section -->
+        <section class="experts" id="advisors">
+            <h2 class="experts__header u-margin-bottom-large">
+                Meet our Experts
+            </h2>
+            <div class="row">
+                {% for advisor in advisors %}
+                    <div class="card overflow-hidden" style="width: 26rem; padding: 0; margin-right: 15px; margin-bottom: 20px; border-radius: 10px;">
+                        <img src="{{ advisor.headshot.url }}" class="card-img-top" alt="Expert Headshot">
+                        <div class="card-body">
+                            <a href="{{ advisor.linkedin }}" class="card-link" target="_blank" rel="noopener noreferrer"><h5 class="card-title experts__name">{{ advisor.name }}</h5></a>
+                            <p class="card-text experts__companies">{{ expert.designation }}</p>
+                            <img src="{{ advisor.company1.url }}" width="90" height="auto" style="margin-left: 10px;" alt="Company Logo">&emsp;
+                            <img src="{{ advisor.company2.url }}" width="90" height="auto" alt="Company Logo">
                         </div>
                     </div>
                 {% endfor %}
