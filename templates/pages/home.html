@@ -3,10 +3,10 @@
 {% block title %}Home{% endblock %}
 
 {% block links %}
-    <li class="nav-item"><a href="#journey" class="nav-link" style="padding: 1.5rem">Journey</a></li>
+    <li class="nav-item"><a href="#journey" class="nav-link" style="padding: 1.5rem">Your Journey</a></li>
     <li class="nav-item"><a href="#solutions" class="nav-link" style="padding: 1.5rem">Solutions</a></li>
     <li class="nav-items"><a href="#benefits" class="nav-link" style="padding: 1.5rem">Benefits</a></li>
-    <li class="nav-items"><a href="#experts" class="nav-link" style="padding: 1.5rem">About</a></li>
+    <li class="nav-items"><a href="#experts" class="nav-link" style="padding: 1.5rem">About Us</a></li>
     <li class="nav-items"><a href="#faq" class="nav-link" style="padding: 1.5rem">FAQ</a></li>
 {% endblock %}
 
@@ -25,11 +25,11 @@
             </p>
             <br>
             <div class="tabbed-text">
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#industry-expertise" class="tabbed-text">INDUSTRY EXPERTISE &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#high-quality" class="tabbed-text">HIGH QUALITY &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#affordable" class="tabbed-text">AFFORDABLE &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#peace-of-mind" class="tabbed-text">PEACE OF MIND &emsp;</a></button>
-                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#build-for-the-future" class="tabbed-text">BUILD FOR THE FUTURE</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#industry-expertise" class="tabbed-text" style="font-size: 1.7rem;">INDUSTRY EXPERTISE &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#high-quality" class="tabbed-text" style="font-size: 1.7rem;">HIGH QUALITY &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#affordable" class="tabbed-text" style="font-size: 1.7rem;">AFFORDABLE &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#peace-of-mind" class="tabbed-text" style="font-size: 1.7rem;">PEACE OF MIND &emsp;</a></button>
+                <button style="background-color: transparent; border: none; outline: none; cursor: pointer;"><a href="#build-for-the-future" class="tabbed-text" style="font-size: 1.7rem;">BUILD FOR THE FUTURE</a></button>
                 
             </div>
             <br>
@@ -580,7 +580,7 @@
             </div>
         </section>
 
-        <!-- Experts Section -->
+        <!-- Advisors Section -->
         <section class="experts" id="experts">
             <h2 class="experts__header u-margin-bottom-large">
                 Our Advisors
@@ -600,12 +600,12 @@
             </div>
         </section>
         
-        <!-- Advisors Section -->
-        <section class="experts" id="advisors">
+        <!-- Experts Section -->
+        <section class="experts">
             <h2 class="experts__header u-margin-bottom-large">
                 Meet our Experts
             </h2>
-            <div class="row">
+            <div class="row justify-content-center">
                 {% for advisor in advisors %}
                     <div class="card overflow-hidden" style="width: 26rem; padding: 0; margin-right: 15px; margin-bottom: 20px; border-radius: 10px;">
                         <img src="{{ advisor.headshot.url }}" class="card-img-top" alt="Expert Headshot">
