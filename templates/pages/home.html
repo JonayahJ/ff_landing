@@ -588,7 +588,7 @@
             <div class="row justify-content-center">
                 {% for expert in experts %}
                     <div class="card overflow-hidden" style="width: 26rem; padding: 0; margin-right: 15px; margin-bottom: 20px; border-radius: 10px;">
-                        <img src="{{ expert.headshot.url }}" class="card-img-top" alt="Expert Headshot">
+                        <img src="{{ expert.headshot.url }}" class="card-img-top" alt="{{ expert.name }} Headshot">
                         <div class="card-body">
                             <a href="{{ expert.linkedin }}" class="card-link" target="_blank" rel="noopener noreferrer"><h5 class="card-title experts__name">{{ expert.name }}</h5></a>
                             <p class="card-text experts__companies">{{ expert.designation }}</p>
@@ -608,7 +608,7 @@
             <div class="row justify-content-center">
                 {% for advisor in advisors %}
                     <div class="card overflow-hidden" style="width: 26rem; padding: 0; margin-right: 15px; margin-bottom: 20px; border-radius: 10px;">
-                        <img src="{{ advisor.headshot.url }}" class="card-img-top" alt="Expert Headshot">
+                        <img src="{{ advisor.headshot.url }}" class="card-img-top" alt="{{ advisor.name }} Headshot">
                         <div class="card-body">
                             <a href="{{ advisor.linkedin }}" class="card-link" target="_blank" rel="noopener noreferrer"><h5 class="card-title experts__name">{{ advisor.name }}</h5></a>
                             <p class="card-text experts__companies">{{ expert.designation }}</p>
