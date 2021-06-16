@@ -1,0 +1,87 @@
+.benefits {
+    background: #fafbfb;
+    padding: 10rem 0;
+
+    &__header {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__subtitle {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    &__icon {
+        color: $keppel;
+    }
+
+    &-box {
+        background-color: rgba($color: #eee, $alpha: .8);
+        padding: 2.5rem;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 2rem rgba($color-black, .15);
+        transition: transform .3s;
+
+        &:hover {
+            transform: translateY(-1.5rem) scale(1.03);
+        }
+    }
+
+    #button {
+        padding: 1.2rem 2.4rem;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        background: $light-cornflower-blue;
+        color: $color-white;
+        text-decoration: none;
+
+        &:hover {
+            background: $steel-blue;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.card {
+    perspective: 150rem; // the lower the number, the more dramatic the perspective
+    -moz-perspective: 150rem; // to get it to work in firefox
+    position: relative; // always give the parent a relative position
+    // height: 53rem;
+
+
+    &__side {
+        font-size: 2rem;
+
+        height: 53rem;
+        transition: all 1.2s ease; // animate the hover transform
+        position: absolute; // base the child on the parent's position
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; // hides the back side of an element
+        border-radius: 3px;
+        overflow: hidden; // making sure the image doesn't overflow the parent container
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+
+        &--back {
+            transform: rotateY(-180deg); // needs to start at -180deg
+            background-color: $color-white;
+        }
+    }
+
+    // rotate across the y axis 180 deg to turn over a card
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg); // return to 0deg
+    }
+}
